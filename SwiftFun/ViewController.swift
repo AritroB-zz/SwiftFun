@@ -11,15 +11,22 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var myFirstLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        view.backgroundColor = UIColor.blue
-        myFirstLabel.textColor = UIColor.white
-        myFirstLabel.text = "Strings are cool"
+       
         
     }
 
 
+    @IBAction func buttonTapped(_ sender: Any) {
+        view.backgroundColor = UIColor.blue
+        myFirstLabel.textColor = UIColor.white
+        myFirstLabel.text = "Strings are cool"
+        print("The button was tapped! :)")
+        
+    }
+    
 }
 
