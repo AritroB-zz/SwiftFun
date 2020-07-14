@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         view.backgroundColor = UIColor.blue
         myFirstLabel.textColor = UIColor.white
-        myFirstLabel.text = "Strings are cool!"
+        myFirstLabel.text = "Strings are cool"
         
     }
 
