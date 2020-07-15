@@ -9,22 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var myFirstLabel: UILabel!
+    var count = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-       
+        
         
     }
-
-
+    
+    
     @IBAction func buttonTapped(_ sender: Any) {
-        view.backgroundColor = UIColor.blue
-        myFirstLabel.textColor = UIColor.white
-        myFirstLabel.text = "Strings are cool"
-        print("The button was tapped! :)")
+        count+=1
+        myFirstLabel.text = String(count)
+        
+        
+        if count>=10 {
+            view.backgroundColor = UIColor.systemPink
+        }
         
     }
     
