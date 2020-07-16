@@ -10,7 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var totalTextField: UITextField!
+    @IBOutlet weak var tipTextField: UITextField!
     @IBOutlet weak var myFirstLabel: UILabel!
+    
     var count = 0
     
     override func viewDidLoad() {
@@ -22,13 +25,15 @@ class ViewController: UIViewController {
     
     
     @IBAction func buttonTapped(_ sender: Any) {
-        count+=1
-        myFirstLabel.text = String(count)
         
+        print(totalTextField.text!)
+        print(tipTextField.text!)
         
-        if count>=10 {
-            view.backgroundColor = UIColor.systemPink
-        }
+        var total = Double(totalTextField.text!)!
+        var tipPercentage = Double(tipTextField.text!)! / 100.0
+        var tip = total * tipPercentage
+        
+        print(tip)
         
     }
     

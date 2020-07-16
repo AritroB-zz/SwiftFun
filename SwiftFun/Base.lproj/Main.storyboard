@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,27 +12,47 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftFun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNe-lZ-INb">
-                                <rect key="frame" x="182" y="395.66666666666669" width="11" height="21"/>
+                                <rect key="frame" x="201.5" y="437.5" width="11" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOZ-sk-tLm">
-                                <rect key="frame" x="166.66666666666666" y="426.66666666666669" width="42" height="30"/>
+                                <rect key="frame" x="186" y="468.5" width="42" height="30"/>
                                 <state key="normal" title="Count"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KgR-C8-TeX"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tip Ex. 15" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2d9-bo-g0K">
+                                <rect key="frame" x="132" y="385" width="150" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="quz-4c-yGM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Total Ex. 143.56" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A0W-6B-77t">
+                                <rect key="frame" x="132" y="328" width="150" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Dwu-GY-wMR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="2d9-bo-g0K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Pf-pu-dhQ"/>
                             <constraint firstItem="uNe-lZ-INb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NjW-j4-8Jr"/>
+                            <constraint firstItem="2d9-bo-g0K" firstAttribute="top" secondItem="A0W-6B-77t" secondAttribute="bottom" constant="23" id="UJj-cm-r7f"/>
+                            <constraint firstItem="A0W-6B-77t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vf0-Rb-sha"/>
                             <constraint firstItem="FOZ-sk-tLm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZGc-Bq-TM9"/>
+                            <constraint firstItem="uNe-lZ-INb" firstAttribute="top" secondItem="2d9-bo-g0K" secondAttribute="bottom" constant="18.666666666666686" id="gHQ-9u-jpx"/>
                             <constraint firstItem="FOZ-sk-tLm" firstAttribute="top" secondItem="uNe-lZ-INb" secondAttribute="bottom" constant="10" id="oZt-ec-fd3"/>
                             <constraint firstItem="uNe-lZ-INb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wNJ-mk-hmF"/>
                         </constraints>
@@ -40,6 +60,8 @@
                     </view>
                     <connections>
                         <outlet property="myFirstLabel" destination="uNe-lZ-INb" id="vdb-UH-wgR"/>
+                        <outlet property="tipTextField" destination="2d9-bo-g0K" id="l6H-ZL-obJ"/>
+                        <outlet property="totalTextField" destination="A0W-6B-77t" id="9Xs-EI-Gth"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
