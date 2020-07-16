@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         myFirstLabel.text = "The tip is $\(tip)"
         
         if tip>=50.0 {
-            myFirstLabel.text = "The tip is $\(tip)!"
+            myFirstLabel.text = "The tip is $\(tip)😳"
         }
         
     }
