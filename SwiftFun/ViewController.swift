@@ -26,18 +26,24 @@ class ViewController: UIViewController {
     
     @IBAction func buttonTapped(_ sender: Any) {
         
-
-        let total = Double(totalTextField.text!)!
-        let tipPercentage = Double(tipTextField.text!)! / 100.0
-        let tip = total * tipPercentage
+        if let totalText = totalTextField.text {
+            if let total = Double(totalText) {
+                if let tipText = tipTextField.text {
+                    if let tipPercentage = Double(tipText)
+                    {
+                        let tip = total * tipPercentage / 100
+                        if tip>=50.0 {
+                        myFirstLabel.text = "The tip is $\(tip)!"
+                }
+            }
+        }
         
-        myFirstLabel.text = "The tip is $\(tip)"
         
-        if tip>=50.0 {
-            myFirstLabel.text = "The tip is $\(tip)😳"
+        
         }
         
     }
     
 }
 
+}
